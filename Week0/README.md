@@ -181,57 +181,6 @@ project-root/
 
 ---
 
-## 🚀 **Quick Install Script**
-
-For automated installation, you can use this script:
-
-```bash
-#!/bin/bash
-# install-eda-tools.sh
-
-echo "🛠️ Installing EDA Tools..."
-
-# Update system
-sudo apt-get update
-
-# Install Iverilog
-echo "📦 Installing Iverilog..."
-sudo apt-get install -y iverilog
-
-# Install GTKWave
-echo "📦 Installing GTKWave..."
-sudo apt install -y gtkwave
-
-# Install Yosys dependencies
-echo "📦 Installing Yosys dependencies..."
-sudo apt-get install -y build-essential clang bison flex \
-  libreadline-dev gawk tcl-dev libffi-dev git \
-  graphviz xdot pkg-config python3 libboost-system-dev \
-  libboost-python-dev libboost-filesystem-dev zlib1g-dev make
-
-# Clone and install Yosys
-echo "📦 Installing Yosys..."
-if [ ! -d "yosys" ]; then
-    git clone https://github.com/YosysHQ/yosys.git
-fi
-
-cd yosys
-git submodule update --init
-make config-gcc
-make -j$(nproc)
-sudo make install
-cd ..
-
-echo "✅ All tools installed successfully!"
-```
-
-To use the script:
-```bash
-chmod +x install-eda-tools.sh
-./install-eda-tools.sh
-```
-
----
 
 ## 📝 **Notes**
 

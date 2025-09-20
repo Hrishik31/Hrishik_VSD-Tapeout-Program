@@ -141,18 +141,11 @@ gtkwave --version
 
 ---
 
-✅ Setup Validation
-Complete Toolchain Status
-<div align="center">
-ToolPrimary FunctionInstallation StatusVersion Verified🎛️ YosysRTL Synthesis & Optimization✅ Operational✅🖥️ IverilogHDL Simulation Engine✅ Operational✅📊 GTKWaveWaveform Visualization✅ Operational✅
-</div>
-Environment Readiness Checklist
-
- All core tools successfully installed
- Version compatibility confirmed
- Dependencies properly resolved
- System integration validated
- Ready for RISC-V development
+| Tool         | Purpose            | Status      |
+| ------------ | ------------------ | ----------- |
+| 🎛️ Yosys    | RTL Synthesis      | ✅ Operational |
+| 🖥️ Iverilog | Verilog Simulation | ✅ Operational |
+| 📊 GTKWave   | Waveform Debugging | ✅ Operational |
 
 ---
 

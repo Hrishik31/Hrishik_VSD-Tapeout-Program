@@ -15,9 +15,9 @@ This task involves installing and verifying three essential open-source EDA tool
 ## 📋 **Table of Contents**
 
 - [🎯 Overview](#-overview)
-- [⚙️ System Requirements](#%EF%B8%8F-system-requirements)  
-- [🎛️ Yosys Installation](#%EF%B8%8F-yosys-installation---rtl-synthesis-tool)
-- [🖥️ Iverilog Installation](#%EF%B8%8F-iverilog-installation---verilog-simulator)
+- [⚙️ System Requirements](#️-system-requirements)  
+- [🎛️ Yosys Installation](#️-yosys-installation---rtl-synthesis-tool)
+- [🖥️ Iverilog Installation](#️-iverilog-installation---verilog-simulator)
 - [📊 GTKWave Installation](#-gtkwave-installation---waveform-viewer)
 - [🔧 Troubleshooting](#-troubleshooting-guide)
 - [✅ Installation Verification](#-installation-verification)
@@ -81,50 +81,173 @@ make
 
 # Install
 sudo make install
-⚠️ Error Fix
+```
+
+### ⚠️ Error Fix
 
 If you see:
+```bash
 make: *** [Makefile:811: check-git-abc] Error 1
+```
+
 Run:
+```bash
 git submodule update --init
 make
 sudo make install
+```
 
-✅ Verification
+### ✅ Verification
+```bash
 yosys --version
+```
 
-🖥️ Iverilog Installation - Verilog Simulator
-📖 About
-http://iverilog.icarus.com/ is an IEEE-1364 compliant Verilog simulator used for RTL functional verification.
+---
 
-🛠️ Steps
+## 🖥️ **Iverilog Installation - Verilog Simulator**
+
+### 📖 About
+[Iverilog](http://iverilog.icarus.com/) is an IEEE-1364 compliant Verilog simulator used for RTL functional verification.
+
+### 🛠️ Steps
+```bash
 sudo apt-get update
 sudo apt-get install iverilog
+```
 
-✅ Verification
+### ✅ Verification
+```bash
 iverilog -v
+```
 
-📊 GTKWave Installation - Waveform Viewer
-📖 About
-http://gtkwave.sourceforge.net/ is a waveform viewer to analyze simulation results (VCD/FST files).
+---
 
-🛠️ Steps
+## 📊 **GTKWave Installation - Waveform Viewer**
+
+### 📖 About
+[GTKWave](http://gtkwave.sourceforge.net/) is a waveform viewer to analyze simulation results (VCD/FST files).
+
+### 🛠️ Steps
+```bash
 sudo apt-get update
 sudo apt install gtkwave
+```
 
-✅ Verification
+### ✅ Verification
+```bash
 gtkwave --version
+```
 
-🔧 Troubleshooting Guide
+---
+
+## 🔧 **Troubleshooting Guide**
+
 | **Issue**            | **Tool**  | **Solution**                       |
-| -------------------- | --------- | ---------------------------------- |
+|----------------------|-----------|-----------------------------------|
 | Git submodule error  | 🎛️ Yosys | `git submodule update --init`      |
 | Missing dependencies | 🎛️ Yosys | Install `build-essential` packages |
 | Permission denied    | All       | Run with `sudo`                    |
 | Package not found    | All       | `sudo apt-get update` first        |
 
-| Tool         | Purpose            | Status      |
-| ------------ | ------------------ | ----------- |
-| 🎛️ Yosys    | RTL Synthesis      | ✅ Installed |
-| 🖥️ Iverilog | Verilog Simulation | ✅ Installed |
-| 📊 GTKWave   | Waveform Debugging | ✅ Installed |
+---
+
+## ✅ **Installation Verification**
+
+<div align="center">
+
+| **Tool**         | **Purpose**            | **Status**      |
+|------------------|------------------------|-----------------|
+| 🎛️ Yosys        | RTL Synthesis          | ✅ Installed    |
+| 🖥️ Iverilog     | Verilog Simulation     | ✅ Installed    |
+| 📊 GTKWave       | Waveform Debugging     | ✅ Installed    |
+
+</div>
+
+---
+
+## 📁 **Repository Structure**
+
+```
+project-root/
+├── README.md
+├── docs/
+│   └── installation-guide.md
+├── scripts/
+│   └── install-tools.sh
+└── examples/
+    ├── basic-counter/
+    └── simple-testbench/
+```
+
+---
+
+## 🚀 **Quick Install Script**
+
+For automated installation, you can use this script:
+
+```bash
+#!/bin/bash
+# install-eda-tools.sh
+
+echo "🛠️ Installing EDA Tools..."
+
+# Update system
+sudo apt-get update
+
+# Install Iverilog
+echo "📦 Installing Iverilog..."
+sudo apt-get install -y iverilog
+
+# Install GTKWave
+echo "📦 Installing GTKWave..."
+sudo apt install -y gtkwave
+
+# Install Yosys dependencies
+echo "📦 Installing Yosys dependencies..."
+sudo apt-get install -y build-essential clang bison flex \
+  libreadline-dev gawk tcl-dev libffi-dev git \
+  graphviz xdot pkg-config python3 libboost-system-dev \
+  libboost-python-dev libboost-filesystem-dev zlib1g-dev make
+
+# Clone and install Yosys
+echo "📦 Installing Yosys..."
+if [ ! -d "yosys" ]; then
+    git clone https://github.com/YosysHQ/yosys.git
+fi
+
+cd yosys
+git submodule update --init
+make config-gcc
+make -j$(nproc)
+sudo make install
+cd ..
+
+echo "✅ All tools installed successfully!"
+```
+
+To use the script:
+```bash
+chmod +x install-eda-tools.sh
+./install-eda-tools.sh
+```
+
+---
+
+## 📝 **Notes**
+
+- Make sure you have sufficient disk space (at least 2GB)
+- Internet connection is required for downloading packages
+- Installation time may vary based on system specifications
+- For WSL users: Ensure X11 forwarding is configured for GTKWave GUI
+
+---
+
+## 🤝 **Contributing**
+
+Feel free to submit issues and enhancement requests!
+
+---
+
+## 📄 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

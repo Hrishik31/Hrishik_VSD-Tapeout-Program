@@ -132,14 +132,6 @@ gtkwave --version
 
 ---
 
-## 🔧 **Troubleshooting Guide**
-
-| **Issue**            | **Tool**  | **Solution**                       |
-|----------------------|-----------|-----------------------------------|
-| Git submodule error  | 🎛️ Yosys | `git submodule update --init`      |
-| Missing dependencies | 🎛️ Yosys | Install `build-essential` packages |
-| Permission denied    | All       | Run with `sudo`                    |
-| Package not found    | All       | `sudo apt-get update` first        |
 
 ---
 

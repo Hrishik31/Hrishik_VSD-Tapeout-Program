@@ -1,4 +1,18 @@
+# RISC-V Reference SoC Tapeout Program VSD
 
+<div align="center">
+
+[![RISC-V](https://img.shields.io/badge/RISC--V-SoC%20Tapeout-blue?style=for-the-badge&logo=riscv)](https://riscv.org/)
+[![VSD](https://img.shields.io/badge/VSD-Program-orange?style=for-the-badge)](https://vsdiat.vlsisystemdesign.com/)
+![Participants](https://img.shields.io/badge/Participants-3500+-success?style=for-the-badge)
+![India](https://img.shields.io/badge/Made%20in-India-saffron?style=for-the-badge)
+
+</div>
+
+# Program Overview
+The RISC-V Reference SoC Tapeout Program, conducted by VSD (VLSI System Design), provides hands-on experience in designing, simulating, and synthesizing a RISC-V based System-on-Chip. Participants learn the complete open-source ASIC flow starting from RTL design to GDSII tapeout.
+
+# Focus Areas:
 </div>
 
 This task involves installing and verifying three essential open-source EDA tools: **Yosys**, **Iverilog**, and **GTKWave** on Ubuntu Linux. Each installation step, error resolution, and verification is documented here.

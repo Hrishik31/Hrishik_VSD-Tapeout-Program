@@ -170,19 +170,7 @@ gtkwave --version
 
 ---
 
-## 📁 **Repository Structure**
 
-```
-project-root/
-├── README.md
-├── docs/
-│   └── installation-guide.md
-├── scripts/
-│   └── install-tools.sh
-└── examples/
-    ├── basic-counter/
-    └── simple-testbench/
-```
 
 ---
 

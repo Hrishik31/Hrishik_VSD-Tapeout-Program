@@ -1,10 +1,3 @@
-# 🛠️ Task 0: System Check and Tool Installation
-
-<div align="center">
-
-![Task](https://img.shields.io/badge/Task-0-brightgreen?style=for-the-badge)
-![Tools](https://img.shields.io/badge/Tools-3%20Installed-blue?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Linux-red?style=for-the-badge&logo=linux)
 
 </div>
 
@@ -19,9 +12,8 @@ This task involves installing and verifying three essential open-source EDA tool
 - [🎛️ Yosys Installation](#️-yosys-installation---rtl-synthesis-tool)
 - [🖥️ Iverilog Installation](#️-iverilog-installation---verilog-simulator)
 - [📊 GTKWave Installation](#-gtkwave-installation---waveform-viewer)
-- [🔧 Troubleshooting](#-troubleshooting-guide)
 - [✅ Installation Verification](#-installation-verification)
-- [📁 Repository Structure](#-repository-structure)
+
 
 ---
 

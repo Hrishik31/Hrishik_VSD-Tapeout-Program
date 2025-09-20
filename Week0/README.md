@@ -43,10 +43,10 @@ This setup ensures a strong foundation for:
 | **Specification** | **Minimum Requirement** | **My System** |
 |-------------------|-------------------------|---------------|
 | **OS** | Ubuntu 20.04+ | Ubuntu 24.04.3 LTS |
-| **RAM** | 4GB+ | 16GB DDR5 |
-| **Storage** | 2GB+ | 100GB NVMe SSD |
-| **CPU** | Dual-core | 12C/16T |
-| **Internet** | Required | ✅ Available |
+| **RAM** | 4GB+ | 16 GB DDR5 |
+| **Storage** | 2GB+ | 512 GB SSD  |
+| **CPU** | Dual-core | 14 Cores |
+| **Internet** | Required | Available |
 
 </div>
 

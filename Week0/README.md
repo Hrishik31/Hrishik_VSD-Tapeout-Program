@@ -75,15 +75,7 @@ cd yosys
 # Install make (if missing)
 sudo apt install make
 
-# Install dependencies
-sudo apt-get install build-essential clang bison flex \
-  libreadline-dev gawk tcl-dev libffi-dev git \
-  graphviz xdot pkg-config python3 libboost-system-dev \
-  libboost-python-dev libboost-filesystem-dev zlib1g-dev
 
-# Configure and build
-make config-gcc
-make
 
 # Install
 sudo make install

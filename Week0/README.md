@@ -83,19 +83,6 @@ make
 sudo make install
 ```
 
-### ⚠️ Error Fix
-
-If you see:
-```bash
-make: *** [Makefile:811: check-git-abc] Error 1
-```
-
-Run:
-```bash
-git submodule update --init
-make
-sudo make install
-```
 
 ### ✅ Verification
 ```bash

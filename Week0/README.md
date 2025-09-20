@@ -101,6 +101,8 @@ sudo make install
 ```bash
 yosys --version
 ```
+<img width="1038" height="602" alt="yosys" src="https://github.com/user-attachments/assets/f285cced-eb71-4fa2-a290-d906b418d4a3" />
+
 
 ---
 
@@ -119,6 +121,7 @@ sudo apt-get install iverilog
 ```bash
 iverilog -v
 ```
+<img width="1272" height="708" alt="iverilog" src="https://github.com/user-attachments/assets/fac0cc27-d430-49d9-a51e-17c3fd51ddba" />
 
 ---
 
@@ -137,6 +140,8 @@ sudo apt install gtkwave
 ```bash
 gtkwave --version
 ```
+<img width="1267" height="742" alt="gtkwave" src="https://github.com/user-attachments/assets/0d0814fe-bdd4-4574-96e2-36507ca599a8" />
+
 
 ---
 
